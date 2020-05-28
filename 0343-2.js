@@ -4,8 +4,8 @@ var integerBreak = function(n) {
   if (n === 4) return 4;
   let res = 1;
   while (n > 4) {
-      n -= 3;
-      res *= 3;
+    n -= 3;
+    res *= 3;
   };
   res *= n;
   return res;

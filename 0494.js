@@ -7,9 +7,9 @@ var findTargetSumWays = function(nums, S) {
   let dp = new Array(W + 1).fill(0);
   dp[0] = 1;
   for (let i = 0; i < nums.length; i++) {
-      for (let j = W; j - nums[i] >= 0; j--) {
-          dp[j] = dp[j] + dp[j - nums[i]];
-      };
+    for (let j = W; j - nums[i] >= 0; j--) {
+      dp[j] = dp[j] + dp[j - nums[i]];
+    };
   };
   return dp[W];
 };

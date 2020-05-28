@@ -12,8 +12,8 @@ var countBinarySubstrings = function(s) {
     };
   };
   arr.push(curLen);
-  for (let i  = 0; i < arr.length - 1; i++) {
-    res += Math.min(arr[i], arr[i+1]);
+  for (let i = 0; i < arr.length - 1; i++) {
+    res += Math.min(arr[i], arr[i + 1]);
   };
   return res;
 };

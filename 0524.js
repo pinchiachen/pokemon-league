@@ -1,5 +1,5 @@
 // 2020/02/10
-var findLongestWord = function (s, d) {
+var findLongestWord = function(s, d) {
   let res = '';
   for (str of d) {
     let left = 0;

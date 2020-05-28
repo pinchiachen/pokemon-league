@@ -6,10 +6,10 @@ var reverseList = function(head) {
   let pre = null;
   let temp;
   while (cur) {
-      temp = cur;
-      cur = cur.next;
-      temp.next = pre;
-      pre = temp;
+    temp = cur;
+    cur = cur.next;
+    temp.next = pre;
+    pre = temp;
   };
   return pre;
 };

@@ -4,14 +4,14 @@ var reverseVowels = function(s) {
   let right = s.length - 1;
   let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
   let arr = Array.from(s);
-  while (left < right) { 
+  while (left < right) {
     if (!vowels.includes(arr[left])) {
-          left += 1;
-      };
-    if (!vowels.includes(arr[right])) {
-        right -= 1;
+      left += 1;
     };
-    if ((vowels.includes(arr[left]) && vowels.includes(arr[right]))) {   
+    if (!vowels.includes(arr[right])) {
+      right -= 1;
+    };
+    if ((vowels.includes(arr[left]) && vowels.includes(arr[right]))) {
       let tmp = arr[left];
       arr[left] = arr[right];
       arr[right] = tmp;

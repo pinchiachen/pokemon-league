@@ -6,12 +6,12 @@ var swapPairs = function(head) {
   let cur = head;
   let nextStage;
   while (cur && cur.next) {
-      nextStage = cur.next.next;
-      cur.next.next = cur;
-      pre.next = cur.next;
-      cur.next = nextStage;
-      pre = cur;
-      cur = cur.next;
+    nextStage = cur.next.next;
+    cur.next.next = cur;
+    pre.next = cur.next;
+    cur.next = nextStage;
+    pre = cur;
+    cur = cur.next;
   };
   return node.next;
 };

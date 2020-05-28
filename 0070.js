@@ -5,9 +5,9 @@ var climbStairs = function(n) {
   let cur = 2;
   let tmp;
   for (let i = 3; i < n + 1; i++) {
-      tmp = cur + pre;
-      pre = cur;
-      cur = tmp;
+    tmp = cur + pre;
+    pre = cur;
+    cur = tmp;
   };
   return cur;
 };

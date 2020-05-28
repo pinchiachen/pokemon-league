@@ -4,9 +4,9 @@ var hasCycle = function(head) {
   let left = head;
   let right = head;
   while (right && right.next) {
-      right = right.next.next;
-      left = left.next;
-      if (left == right) return true;        
+    right = right.next.next;
+    left = left.next;
+    if (left == right) return true;
   };
   return false;
 };
