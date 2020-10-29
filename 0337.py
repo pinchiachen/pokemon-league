@@ -14,7 +14,7 @@ class Solution:
         if not root: return [0, 0]
         left = self.traversal(root.left)
         right = self.traversal(root.right)
-        last_no_rub = left[0] + right[0]
-        last_rub = left[1] + right[1]
-        cur_rub = max(last_no_rub + root.val, last_rub)
-        return [last_rub, cur_rub]
+        cur_rub = left[0] + right[0] + root.val
+        cur_no_rub = left[1] + right[1]
+        next_no_rub = max(cur_no_rub, cur_rub)
+        return [cur_no_rub, next_no_rub]
