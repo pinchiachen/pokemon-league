@@ -8,12 +8,12 @@ class Solution:
             mid = left + (right-left)//2
             if nums[mid] == target:
                 return mid
-            if nums[mid] > nums[right]:
+            if nums[left] <= nums[mid]: # left to mid is sorted
                 if target < nums[mid] and nums[left] <= target:
                     right = mid - 1
                 else:
                     left = mid + 1
-            else:
+            else: # mid to right is sorted
                 if target > nums[mid] and target <= nums[right]:
                     left = mid + 1
                 else:
